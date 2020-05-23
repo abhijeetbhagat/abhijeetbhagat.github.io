@@ -2,7 +2,7 @@
 layout: post
 title:  "What is ICE, STUN and TURN"
 date:   2020-04-18 22:18:41 +0530
-categories: jekyll update
+categories: ice stun turn
 ---
 This post describes how two devices can initiate communication when they are
 behind their respective NATs. Specifically, we'll see how a device traverses a NAT to reach out to the other device and establishes a connection to it.

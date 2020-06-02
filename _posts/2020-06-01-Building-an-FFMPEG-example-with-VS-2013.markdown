@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Building an FFMPEG example with VS 2013"
-date:   2020-05-08 10:25:41 +0530
+date:   2020-06-01 10:25:41 +0530
 categories: ffmpeg
 ---
 I've been trying to get into building a simple video player with FFMPEG on Windows using VS 2013. The first step is to get FFMPEG working. This is what I did - &nbsp;

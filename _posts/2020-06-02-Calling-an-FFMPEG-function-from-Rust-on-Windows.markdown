@@ -32,13 +32,19 @@ use self::libc::*;
 
 #[link(name="avcodec")]
 extern {
-    pub fn avcodec_version() -> c_int;
+    pub fn avcodec_version() -> c_uint;
 }
 ```
 &nbsp;
-Here, we've 'translated' the prototype of the `avcodec_version` C function to Rust. Since it returns an integer, we set the return type to `c_int` from the `libc` crate (this is why we need libc). We also wrap our function in an `extern` block annotated with the name of the static library (avcodec.lib). On Windows, you can't link directly with a DLL. So you link against a static lib that contains references to symbols from the corresponding DLL.
+Its C prototype looks like this:
 &nbsp;
-When we invoke `cargo build`, it invokes the system linker available on the platform - `ld` on Linux and `link.exe` on Windows (which requires C/C++ build tools or Visual Studio to be installed first). In our case, we are invoking `link.exe` and it needs the location of the FFMPEG static libs; otherwise, it fails. Since we are only experimenting, we won't fiddle with modifying `LIBPATH`/`LIB` environmen variables or even using the developer command prompt that comes with Visual Studio. Instead, we'll copy our FFMPEG static libraries to the path which `link.exe` looks into when invoked by `cargo build`.
+```C
+unsigned avcodec_version(void);
+```
+&nbsp;
+Here, we've 'translated' the prototype of the `avcodec_version` C function to Rust. Since it returns an unsigned integer, we set the return type to `c_uint` from the `libc` crate (this is why we need libc). We also wrap our function in an `extern` block annotated with the name of the static library (avcodec.lib). On Windows, you can't link directly with a DLL. So you link against a static lib that contains references to symbols from the corresponding DLL.
+&nbsp;
+When we invoke `cargo build`, it invokes the system linker available on the platform - `ld` on Linux and `link.exe` on Windows (which requires C/C++ build tools or Visual Studio to be installed first). In our case, we are invoking `link.exe` and it needs the location of the FFMPEG static libs; otherwise, it fails. Since we are only experimenting, we won't fiddle with modifying `LIBPATH`/`LIB` (I am not sure) environment variables or even using the developer command prompt that comes with Visual Studio. Instead, we'll copy our FFMPEG static libraries to the path which `link.exe` looks into when invoked by `cargo build`.
 &nbsp;
 On my machine, this is the `%USERPROFILE%\.rustup\toolchains\nightly-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib` folder. Let's copy the `avcodec.lib` there.
 &nbsp;

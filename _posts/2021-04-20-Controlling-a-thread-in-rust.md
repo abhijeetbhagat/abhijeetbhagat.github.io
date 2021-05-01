@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Controlling a thread in Rust"
-date:   2021-02-20 16:32:41 +0530
-categories: rust multithreading condvar channel
 ---
 
 Recently at work, I wanted to test some changes made on a server 'hassle-free'. Major motivations being:

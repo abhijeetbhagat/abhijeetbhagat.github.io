@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Implementing a simple threadpool in rust"
-date:   2021-04-30 16:32:41 +0530
-categories: rust threadpool blocking-queue condvar 
 ---
 
 A threadpool is a pool of threads that are waiting to process tasks. A very simple threadpool can look like this:

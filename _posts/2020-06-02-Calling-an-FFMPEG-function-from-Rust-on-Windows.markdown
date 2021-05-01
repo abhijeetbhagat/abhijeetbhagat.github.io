@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Calling an FFMPEG function from Rust on Windows"
-date:   2020-06-02 10:25:41 +0530
-categories: ffmpeg
 ---
 After [building and running an FFMPEG example using Visual Studio 2013](https://abhijeetbhagat.github.io/ffmpeg/2020/06/01/Building-an-FFMPEG-example-with-VS-2013.html), let's see how to call the simplest (one that does not have a signature involving composite types) function from FFMPEG from a rust program. FFMPEG is a C library and you can easily call into a C library via rust by using FFI (Foreign Function Interface).
 &nbsp;

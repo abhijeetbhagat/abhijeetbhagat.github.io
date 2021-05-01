@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Bypassing CORS problem when making cross domain requests"
-date:   2020-05-08 10:25:41 +0530
-categories: cors chrome
 ---
 
 !CAUTION! Exercise caution when playing with security features of browsers.

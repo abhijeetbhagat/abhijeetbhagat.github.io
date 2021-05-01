@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Async traits and thread-safety"
-date:   2021-03-01 10:25:41 +0530
-categories: rust async-trait
 ---
 
 As of writing this article, Rust has no out-of-the-box support for traits with async functions. For this, the `async-trait` crate has to be used:

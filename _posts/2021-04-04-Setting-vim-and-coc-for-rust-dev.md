@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Setting up vim and coc for rust dev"
-date:   2021-04-04 20:18:41 +0530
-categories: vim coc rust
 ---
 Install `coc` using `vim.plug` plugin manager by adding this to `vimrc`:
 &nbsp;

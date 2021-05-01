@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Setting up clippy with rust-analyzer in VS Code"
-date:   2020-05-08 10:25:41 +0530
-categories: vscode clippy rust-analyzer
 ---
 [TL;DR](#perform)
 &nbsp;

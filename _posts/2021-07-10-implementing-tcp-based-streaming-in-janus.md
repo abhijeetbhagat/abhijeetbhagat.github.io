@@ -188,4 +188,6 @@ process:
 }
 ```
 &nbsp;
-the extracted rtp packets can now be relayed to all the webrtc viewers.
+the extracted rtp packets can now be relayed to all the webrtc viewers:
+&nbsp;
+![stream](/assets/rtsp-stream.png)

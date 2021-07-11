@@ -7,7 +7,7 @@ janus is a cute little webrtc gateway implemented in c. one of the features it s
 &nbsp;
 **how is tcp based streaming different from udp based streaming?**
 &nbsp;
-in a udp based streaming mode, the rtsp commands - OPTIONS, DESCRIBE, SETUP, etc. - are sent over a tcp socket, since rtsp itself is a tcp based protocol. the media and rtcp data, however, flows on different udp sockets. in a tcp based streaming mode, everything flows over a single tcp socket in an interleaved fashion.
+in a udp based streaming mode, the rtsp commands - OPTIONS, DESCRIBE, SETUP, etc. - are sent over a tcp socket, since rtsp itself is a tcp based protocol. the media and rtcp data, however, flows on different udp sockets. in a tcp based streaming mode, everything flows over a single tcp socket in an interleaved fashion as mandated [here](https://datatracker.ietf.org/doc/html/rfc7826#section-14).
 &nbsp;
 **how to proceed?**
 &nbsp;

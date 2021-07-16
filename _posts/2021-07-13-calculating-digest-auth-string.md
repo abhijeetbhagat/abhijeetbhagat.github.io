@@ -94,6 +94,8 @@ Date: Fri, Jul 16 2021 07:44:58 GMT
 
 ```
 &nbsp;
+**done**?
+&nbsp;
 this is not the end though. everytime we send an rtsp command going forward, we need to repeat the steps where we -
 a. calculate the hash (m2) - `command:url`
 b. calculate the response string - `m1:nonce:m2`

@@ -5,7 +5,7 @@ title:  "Setting up a test rtsp stream"
 
 steps for setting up a test rtsp source:
 &nbsp;
-1. download `rtsp-simple-server` from [here](https://github.com/aler9/rtsp-simple-server and extract the archive)
+1. download `rtsp-simple-server` from [here](https://github.com/aler9/rtsp-simple-server) and extract the archive
 2. download `rtsp-simple-server.yml` file from [here](https://raw.githubusercontent.com/aler9/rtsp-simple-server/main/rtsp-simple-server.yml)
 3. either set `protocols` value to `udp` or `tcp` in the yml file
 4. turn off rtmp, hls in the yml file
